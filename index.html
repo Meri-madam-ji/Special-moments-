@@ -1,0 +1,1065 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forever With Madam Ji ❤️</title>
+
+    <!-- Mobile Web App / PWA Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Madam Ji ❤️">
+    <meta name="application-name" content="Madam Ji ❤️">
+    <meta name="theme-color" content="#ff9a9e">
+
+    <!-- Glossy Heart App Icon -->
+    <link id="app-favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23ff4d6d'/%3E%3Cstop offset='100%25' stop-color='%23ff758f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='512' height='512' rx='120' fill='url(%23g)'/%3E%3Cpath d='M256 408 C250 408 112 312 112 196 C112 140 156 104 204 104 C232 104 248 120 256 136 C264 120 280 104 308 104 C356 104 400 140 400 196 C400 312 262 408 256 408 Z' fill='%23ffffff'/%3E%3C/svg%3E">
+    <link id="app-touch-icon" rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23ff4d6d'/%3E%3Cstop offset='100%25' stop-color='%23ff758f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='512' height='512' rx='120' fill='url(%23g)'/%3E%3Cpath d='M256 408 C250 408 112 312 112 196 C112 140 156 104 204 104 C232 104 248 120 256 136 C264 120 280 104 308 104 C356 104 400 140 400 196 C400 312 262 408 256 408 Z' fill='%23ffffff'/%3E%3C/svg%3E">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Exact Original Pastel Pink & Peach Animated Gradient */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(-45deg, #ff9a9e, #fecfef, #ffecd2, #fcb69f);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+            margin: 0;
+            padding: 80px 15px 40px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            color: #4a1525;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .font-script {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        /* Floating Hearts & Dreamy Bokeh Background */
+        .hearts-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .heart-particle {
+            position: absolute;
+            bottom: -50px;
+            color: rgba(255, 255, 255, 0.65);
+            text-shadow: 0 2px 12px rgba(214, 51, 108, 0.18);
+            animation: floatUpwards linear infinite;
+            user-select: none;
+        }
+
+        .bokeh-orb {
+            position: absolute;
+            bottom: -60px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 70%);
+            animation: floatUpwards linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes floatUpwards {
+            0% {
+                transform: translateY(0) rotate(0deg) scale(0.8);
+                opacity: 0;
+            }
+            15% {
+                opacity: 0.75;
+            }
+            85% {
+                opacity: 0.65;
+            }
+            100% {
+                transform: translateY(-110vh) rotate(25deg) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        /* Centered Main Frosted Crystal Glass Container */
+        .main-glass-container, .glass-container {
+            position: relative;
+            z-index: 10;
+            max-width: 600px;
+            width: 92%;
+            padding: 36px 26px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.36);
+            backdrop-filter: blur(18px) saturate(140%);
+            -webkit-backdrop-filter: blur(18px) saturate(140%);
+            border: 1px solid rgba(255, 255, 255, 0.68);
+            border-radius: 26px;
+            box-shadow:
+                0 20px 50px rgba(74, 21, 37, 0.11),
+                0 6px 20px rgba(214, 51, 108, 0.08),
+                inset 0 1px 1px rgba(255, 255, 255, 0.92),
+                inset 0 -1px 1px rgba(255, 255, 255, 0.35);
+        }
+
+        @media (max-width: 480px) {
+            .main-glass-container, .glass-container {
+                width: 95%;
+                padding: 28px 18px;
+            }
+        }
+
+        /* Delicate Rose-Gold / Pink Ornamental Header Divider */
+        .ornamental-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 12px auto 2px auto;
+            max-width: 240px;
+        }
+
+        .ornamental-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(214, 51, 108, 0), rgba(214, 51, 108, 0.45), rgba(214, 51, 108, 0));
+        }
+
+        .ornamental-gem {
+            color: #d6336c;
+            font-size: 0.7rem;
+            opacity: 0.75;
+            letter-spacing: 3px;
+        }
+
+        /* Inner Clickable Counter Cards with Diagonal Light Sheen */
+        .counter-card {
+            position: relative;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.44);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.75);
+            border-radius: 22px;
+            padding: 22px 18px;
+            box-shadow:
+                0 8px 26px rgba(74, 21, 37, 0.07),
+                inset 0 1px 1px rgba(255, 255, 255, 0.95),
+                inset 0 -1px 1px rgba(255, 255, 255, 0.4);
+            transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+                        box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+                        background 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+            cursor: pointer;
+        }
+
+        .counter-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -120%;
+            width: 65%;
+            height: 100%;
+            background: linear-gradient(
+                115deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.55) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: skewX(-22deg);
+            transition: left 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+            pointer-events: none;
+        }
+
+        .counter-card:hover::before {
+            left: 140%;
+        }
+
+        .counter-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.56);
+            box-shadow:
+                0 14px 32px rgba(214, 51, 108, 0.15),
+                0 4px 12px rgba(74, 21, 37, 0.06),
+                inset 0 1px 2px rgba(255, 255, 255, 0.98);
+        }
+
+        .counter-card:active {
+            transform: translateY(-1px) scale(0.99);
+        }
+
+        /* Individual Time Boxes Inside Cards */
+        .time-box {
+            background: rgba(255, 255, 255, 0.58);
+            border: 1px solid rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            padding: 12px 6px;
+            box-shadow:
+                0 4px 14px rgba(214, 51, 108, 0.06),
+                inset 0 1px 1px rgba(255, 255, 255, 0.95);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .counter-card:hover .time-box {
+            background: rgba(255, 255, 255, 0.68);
+        }
+
+        .time-number, .time-value {
+            color: #d6336c;
+            font-weight: 700;
+            line-height: 1.1;
+            font-variant-numeric: tabular-nums;
+            text-shadow: 0 2px 8px rgba(214, 51, 108, 0.14);
+        }
+
+        .time-label {
+            color: #8a3a52;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-top: 4px;
+        }
+
+        /* Romantic Gradient Buttons with Shimmer Sweep */
+        .btn-romantic, .nav-btn {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(45deg, #ff4d6d, #ff758f);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 50px;
+            box-shadow:
+                0 6px 18px rgba(255, 77, 109, 0.38),
+                inset 0 1px 1px rgba(255, 255, 255, 0.45);
+            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                        box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                        filter 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+            cursor: pointer;
+        }
+
+        .btn-romantic::after, .nav-btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+            transform: skewX(-20deg);
+            transition: left 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .btn-romantic:hover::after, .nav-btn:hover::after {
+            left: 130%;
+        }
+
+        .btn-romantic:hover, .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow:
+                0 10px 24px rgba(255, 77, 109, 0.5),
+                inset 0 1px 1px rgba(255, 255, 255, 0.6);
+            filter: brightness(1.03);
+        }
+
+        .btn-romantic:active, .nav-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Subtle Pastel Pill Buttons (Music & Save to Home Screen) */
+        .pill-pastel {
+            background: rgba(255, 255, 255, 0.68);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            color: #4a1525;
+            border-radius: 50px;
+            box-shadow:
+                0 4px 15px rgba(31, 38, 135, 0.09),
+                inset 0 1px 1px rgba(255, 255, 255, 0.95);
+            transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+            cursor: pointer;
+        }
+
+        .pill-pastel:hover {
+            background: rgba(255, 255, 255, 0.88);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(214, 51, 108, 0.16);
+        }
+
+        /* Date Badge & Tap Prompt */
+        .date-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.62);
+            border: 1px solid rgba(255, 255, 255, 0.88);
+            color: #8a3a52;
+            border-radius: 50px;
+            padding: 4px 15px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.9);
+        }
+
+        .tap-prompt {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.88);
+            color: #d6336c;
+            border-radius: 50px;
+            padding: 5px 16px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(214, 51, 108, 0.06);
+            transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), background 0.3s ease;
+        }
+
+        .counter-card:hover .tap-prompt {
+            background: rgba(255, 255, 255, 0.82);
+            transform: scale(1.03);
+        }
+
+        /* Screen Fade Transitions */
+        .screen-view {
+            display: none;
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1), transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .screen-view.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Header Title Glow */
+        .header-title {
+            color: #d6336c;
+            text-shadow: 0 2px 10px rgba(214, 51, 108, 0.16), 0 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Beating Heart Animation */
+        .heartbeat {
+            display: inline-block;
+            animation: pulseHeart 1.5s infinite ease-in-out;
+            filter: drop-shadow(0 4px 10px rgba(214, 51, 108, 0.25));
+        }
+
+        @keyframes pulseHeart {
+            0%, 100% { transform: scale(1); }
+            15% { transform: scale(1.22); }
+            30% { transform: scale(0.95); }
+            45% { transform: scale(1.14); }
+        }
+
+        /* Music Player Equalizer */
+        .music-btn.playing .vinyl-icon {
+            animation: spinSlow 4s linear infinite;
+        }
+
+        @keyframes spinSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .eq-bars {
+            display: inline-flex;
+            align-items: flex-end;
+            gap: 2px;
+            height: 11px;
+        }
+
+        .eq-bar {
+            width: 2px;
+            height: 3px;
+            background: #d6336c;
+            border-radius: 2px;
+        }
+
+        .music-btn.playing .eq-bar:nth-child(1) { animation: eqAnim 0.55s ease-in-out infinite alternate; }
+        .music-btn.playing .eq-bar:nth-child(2) { animation: eqAnim 0.4s ease-in-out infinite alternate 0.15s; }
+        .music-btn.playing .eq-bar:nth-child(3) { animation: eqAnim 0.65s ease-in-out infinite alternate 0.3s; }
+
+        @keyframes eqAnim {
+            0% { height: 3px; }
+            100% { height: 11px; }
+        }
+
+        /* Secret Memory Modal & Stationery Aesthetics */
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(74, 21, 37, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 50;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        .modal-backdrop.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .letter-modal-card, .modal-box {
+            background: linear-gradient(180deg, #fffafb 0%, #fff4f7 100%);
+            color: #4a1525;
+            border: 2px solid rgba(255, 255, 255, 0.95);
+            border-radius: 26px;
+            box-shadow:
+                0 25px 60px rgba(74, 21, 37, 0.28),
+                inset 0 1px 2px rgba(255, 255, 255, 0.95);
+            transform: scale(0.92) translateY(15px);
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-backdrop.active .letter-modal-card,
+        .modal-backdrop.active .modal-box {
+            transform: scale(1) translateY(0);
+        }
+
+        /* Stationery Letter Inner Frame */
+        .stationery-paper {
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid rgba(214, 51, 108, 0.16);
+            outline: 1px solid rgba(214, 51, 108, 0.07);
+            outline-offset: -5px;
+            border-radius: 18px;
+            box-shadow: inset 0 2px 10px rgba(214, 51, 108, 0.04);
+        }
+
+        /* Polaroid Frame with Realistic Translucent Washi Tape */
+        .polaroid-frame {
+            position: relative;
+            background: #ffffff;
+            padding: 12px 12px 16px 12px;
+            border-radius: 16px;
+            box-shadow:
+                0 12px 28px rgba(74, 21, 37, 0.14),
+                0 2px 6px rgba(74, 21, 37, 0.06);
+            border: 1px solid rgba(255, 228, 234, 0.9);
+            transform: rotate(-1.2deg);
+            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .polaroid-frame:hover {
+            transform: rotate(0deg) scale(1.01);
+        }
+
+        .polaroid-frame::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-2deg);
+            width: 86px;
+            height: 22px;
+            background: rgba(255, 218, 228, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 0 2px 6px rgba(74, 21, 37, 0.06);
+            backdrop-filter: blur(2px);
+            border-radius: 3px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Hearts Background -->
+    <div id="hearts-bg" class="hearts-bg" aria-hidden="true"></div>
+
+    <!-- Hidden Audio Element ("Abhi Kuch Dino Se" via Dropbox) -->
+    <audio id="bg-music" src="https://www.dropbox.com/scl/fi/3q6fegv5p54qjlv3aix6z/Abhi-Kuch-Dino-SnapYT.App.mp3?rlkey=o55vplx476ttwqwd3aw70z0td&st=a49bq044&raw=1" loop preload="auto"></audio>
+
+    <!-- Top-Right Compact Music Pill Button -->
+    <button id="music-toggle-btn" onclick="toggleMusic()" class="music-btn pill-pastel fixed top-4 right-4 sm:top-5 sm:right-6 z-40 px-4 py-2 flex items-center gap-2 text-xs sm:text-sm font-semibold">
+        <span class="vinyl-icon inline-block text-sm">🎵</span>
+        <span id="music-label">Play a Song</span>
+        <span class="eq-bars" aria-hidden="true">
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+        </span>
+    </button>
+
+    <!-- ================= CENTERED MAIN GLASS CONTAINER ================= -->
+    <main class="main-glass-container glass-container">
+
+        <!-- Shared Header at Top of Card -->
+        <header class="header mb-6">
+            <div class="text-4xl sm:text-5xl mb-2 heartbeat">❤️</div>
+            <h1 class="header-title font-script text-4xl sm:text-5xl font-bold mb-1">
+                Forever With Madam Ji
+            </h1>
+            <p class="text-xs sm:text-sm text-[#8a3a52] font-medium">
+                Every second with you is a blessing ✨
+            </p>
+            <!-- Delicate Ornamental Divider -->
+            <div class="ornamental-divider" aria-hidden="true">
+                <span class="ornamental-line"></span>
+                <span class="ornamental-gem">❖ ♥ ❖</span>
+                <span class="ornamental-line"></span>
+            </div>
+        </header>
+
+        <!-- ================= SCREEN 1: MAIN SCREEN ================= -->
+        <section id="screen-1" class="screen-view active">
+            <!-- Prominent Main Counter Card (Clickable to open Letter 0) -->
+            <div onclick="openLetterModal('main')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLetterModal('main');}" class="counter-card mb-7">
+                <h2 class="font-script text-3xl sm:text-4xl font-bold text-[#4a1525] mb-2">
+                    Time Together ❤️
+                </h2>
+                <div class="date-badge mb-5">
+                    Since July 21, 2026 • 9:36 PM
+                </div>
+
+                <!-- 3x2 Responsive Grid: Years, Months, Days, Hours, Minutes, Seconds -->
+                <div class="grid grid-cols-3 gap-2.5 sm:gap-3.5 mb-5">
+                    <div class="time-box">
+                        <span id="main-years" class="time-number text-2xl sm:text-3xl">0</span>
+                        <span class="time-label text-[10px] sm:text-xs">Years</span>
+                    </div>
+                    <div class="time-box">
+                        <span id="main-months" class="time-number text-2xl sm:text-3xl">0</span>
+                        <span class="time-label text-[10px] sm:text-xs">Months</span>
+                    </div>
+                    <div class="time-box">
+                        <span id="main-days" class="time-number text-2xl sm:text-3xl">0</span>
+                        <span class="time-label text-[10px] sm:text-xs">Days</span>
+                    </div>
+                    <div class="time-box">
+                        <span id="main-hours" class="time-number text-2xl sm:text-3xl">00</span>
+                        <span class="time-label text-[10px] sm:text-xs">Hours</span>
+                    </div>
+                    <div class="time-box">
+                        <span id="main-minutes" class="time-number text-2xl sm:text-3xl">00</span>
+                        <span class="time-label text-[10px] sm:text-xs">Minutes</span>
+                    </div>
+                    <div class="time-box">
+                        <span id="main-seconds" class="time-number text-2xl sm:text-3xl">00</span>
+                        <span class="time-label text-[10px] sm:text-xs">Seconds</span>
+                    </div>
+                </div>
+
+                <div class="tap-prompt">
+                    <span>💌 Tap to read my letter</span>
+                </div>
+            </div>
+
+            <!-- Navigation Button to Screen 2 -->
+            <button onclick="switchScreen(2)" class="btn-romantic px-7 py-3.5 text-sm sm:text-base font-semibold inline-flex items-center gap-2">
+                <span>View Our Special Moments ✨</span>
+            </button>
+        </section>
+
+        <!-- ================= SCREEN 2: MILESTONES SCREEN ================= -->
+        <section id="screen-2" class="screen-view">
+            <!-- Back Button at Top -->
+            <div class="flex justify-start mb-5">
+                <button onclick="switchScreen(1)" class="btn-romantic px-5 py-2 text-xs sm:text-sm font-semibold inline-flex items-center gap-1.5">
+                    <span>← Back to Main</span>
+                </button>
+            </div>
+
+            <!-- Vertical Stack of 3 Milestone Cards -->
+            <div class="space-y-5">
+
+                <!-- Milestone 1: The Day I First Saw You -->
+                <div onclick="openLetterModal('saw')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLetterModal('saw');}" class="counter-card">
+                    <h3 class="font-script text-2xl sm:text-3xl font-bold text-[#4a1525] mb-1.5">
+                        The Day I First Saw You 👀
+                    </h3>
+                    <div class="date-badge mb-4">
+                        February 13, 2025 • 8:23 AM
+                    </div>
+
+                    <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 mb-4">
+                        <div class="time-box py-2 px-1">
+                            <span id="saw-years" class="time-number text-lg sm:text-xl">0</span>
+                            <span class="time-label text-[9px]">Years</span>
+                        </div>
+                        <div class="time-box py-2 px-1">
+                            <span id="saw-months" class="time-number text-lg sm:text-xl">0</span>
+                            <span class="time-label text-[9px]">Months</span>
+                        </div>
+                        <div class="time-box py-2 px-1">
+                            <span id="saw-days" class="time-number text-lg sm:text-xl">0</span>
+                            <span class="time-label text-[9px]">Days</span>
+                        </div>
+                        <div class="time-box py-2 px-1">
+                            <span id="saw-hours" class="time-number text-lg sm:text-xl">00</span>
+                            <span class="time-label text-[9px]">Hours</span>
+                        </div>
+                        <div class="time-box py-2 px-1">
+                            <span id="saw-minutes" class="time-number text-lg sm:text-xl">00</span>
+                            <span class="time-label text-[9px]">Mins</span>
+                        </div>
+                        <div class="time-box py-2 px-1">
+                            <span id="saw-seconds" class="time-number text-lg sm:text-xl">00</span>
+                            <span class="time-label text-[9px]">Secs</span>
+                        </div>
+                    </div>
+
+                    <div class="tap-prompt">
+                        <span>💌 Tap to read memory</span>
+                    </div>
+                </div>
+
+                <!-- Milestone 2: Our First Conversation -->
+                <div onclick="openLetterModal('talk')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLetterModal('talk');}" class="counter-card">
+                    <h3 class="font-script text-2xl sm:text-3xl font-bold text-[#4a1525] mb-1.5">
+                        Our First Conversation 💬
+                    </h3>
+                    <div class="date-badge mb-4">
+                        November 18, 2025 • 6:28 PM
+                    </div>
+
+                    <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 mb-4">
+                        <div class="time-box py-2 px-1">
+                            <span id="talk-years" class="time-number text-lg sm:text-xl">0</span>
+                            <span class="time-label text-[9px]">Years</span>
+                        </div>
+                        <div class="time-box py-2 px-1">
+                            <span id="talk-months" class="time-number text-lg sm:text-xl">0</span>
+                            <span class="time-label text-[9px]">Months</span>
+                        </div>
+                        <div class="time-box py-2 px-1">
+                            <span id="talk-days" class="time-number text-lg sm:text-xl">0</span>
+                            <span class="time-label text-[9px]">Days</span>
+                        </div>
+                        <div class="time-box py-2 px-1">
+                            <span id="talk-hours" class="time-number text-lg sm:text-xl">00</span>
+                            <span class="time-label text-[9px]">Hours</span>
+                        </div>
+                        <div class="time-box py-2 px-1">
+                            <span id="talk-minutes" class="time-number text-lg sm:text-xl">00</span>
+                            <span class="time-label text-[9px]">Mins</span>
+                        </div>
+                        <div class="time-box py-2 px-1">
+                            <span id="talk-seconds" class="time-number text-lg sm:text-xl">00</span>
+                            <span class="time-label text-[9px]">Secs</span>
+                        </div>
+                    </div>
+
+                    <div class="tap-prompt">
+                        <span>💌 Tap to read memory</span>
+                    </div>
+                </div>
+
+                <!-- Milestone 3: First Meeting as a Couple -->
+                <div onclick="openLetterModal('met')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLetterModal('met');}" class="counter-card">
+                    <h3 class="font-script text-2xl sm:text-3xl font-bold text-[#4a1525] mb-1.5">
+                        First Meeting as a Couple 👩‍❤️‍👨
+                    </h3>
+                    <div class="date-badge mb-4">
+                        September 12, 2026 • 12:42 AM
+                    </div>
+
+                    <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 mb-4">
+                        <div class="time-box py-2 px-1">
+                            <span id="met-years" class="time-number text-lg sm:text-xl">0</span>
+                            <span class="time-label text-[9px]">Years</span>
+                        </div>
+                        <div class="time-box py-2 px-1">
+                            <span id="met-months" class="time-number text-lg sm:text-xl">0</span>
+                            <span class="time-label text-[9px]">Months</span>
+                        </div>
+                        <div class="time-box py-2 px-1">
+                            <span id="met-days" class="time-number text-lg sm:text-xl">0</span>
+                            <span class="time-label text-[9px]">Days</span>
+                        </div>
+                        <div class="time-box py-2 px-1">
+                            <span id="met-hours" class="time-number text-lg sm:text-xl">00</span>
+                            <span class="time-label text-[9px]">Hours</span>
+                        </div>
+                        <div class="time-box py-2 px-1">
+                            <span id="met-minutes" class="time-number text-lg sm:text-xl">00</span>
+                            <span class="time-label text-[9px]">Mins</span>
+                        </div>
+                        <div class="time-box py-2 px-1">
+                            <span id="met-seconds" class="time-number text-lg sm:text-xl">00</span>
+                            <span class="time-label text-[9px]">Secs</span>
+                        </div>
+                    </div>
+
+                    <div class="tap-prompt">
+                        <span>📸 Tap to see photo &amp; letter</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Subtle Save to Home Screen Button at Bottom of Card -->
+        <div class="mt-7 pt-4 border-t border-white/50 flex justify-center">
+            <button onclick="openInstallGuide()" class="pill-pastel px-4 py-1.5 text-xs font-semibold inline-flex items-center gap-1.5">
+                <span>📱 Save to Home Screen</span>
+            </button>
+        </div>
+
+    </main>
+
+    <!-- ================= SECRET MEMORY POP-UP MODAL ================= -->
+    <div id="letter-modal" class="modal-backdrop" onclick="if(event.target.id==='letter-modal') closeLetterModal()">
+        <div class="letter-modal-card relative w-full max-w-lg p-6 sm:p-8 text-center">
+            <button onclick="closeLetterModal()" aria-label="Close" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-pink-100 hover:bg-pink-200 text-[#d6336c] font-bold text-lg flex items-center justify-center cursor-pointer">
+                &times;
+            </button>
+
+            <div class="text-3xl mb-1">💌</div>
+            <h3 id="modal-title" class="font-script text-3xl sm:text-4xl font-bold text-[#d6336c] mb-1">
+                Time Together ❤️
+            </h3>
+            <p id="modal-date" class="text-xs text-[#6d3b47] bg-pink-100/80 inline-block px-3.5 py-1 rounded-full mb-5 font-medium">
+                July 21, 2026 • 9:36 PM
+            </p>
+
+            <!-- Polaroid Photo Container (Shown only for 3rd Milestone) -->
+            <div id="modal-photo-wrapper" class="hidden mb-5 pt-2">
+                <div class="polaroid-frame mx-auto max-w-xs">
+                    <img id="modal-photo" src="https://www.dropbox.com/scl/fi/vzaf9eb7qka5fz3lgdkri/InShot_20260913_095501884.jpg?rlkey=rinvw59era6d8x1k6g0soyi2r&st=i3zpj567&raw=1" alt="First Meeting as a Couple" onerror="this.onerror=null;this.src='https://placehold.co/600x450/ffe4e6/d6336c?text=Our+First+Meeting+%E2%9D%A4%EF%B8%8F';" class="w-full h-auto max-h-64 object-cover rounded-xl">
+                    <p class="font-script text-2xl text-[#d6336c] mt-2.5">Our First Meeting ❤️</p>
+                </div>
+            </div>
+
+            <!-- Warm Love Letter Content -->
+            <div class="stationery-paper p-5 text-left">
+                <p id="modal-body" class="text-sm sm:text-base text-[#4a1525] leading-relaxed whitespace-pre-line"></p>
+                <p class="font-script text-2xl sm:text-3xl text-[#d6336c] text-right mt-4">
+                    Forever Yours, Fahim ❤️
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= SAVE TO HOME SCREEN MODAL ================= -->
+    <div id="install-modal" class="modal-backdrop" onclick="if(event.target.id==='install-modal') closeInstallGuide()">
+        <div class="letter-modal-card relative w-full max-w-md p-6 sm:p-8 text-center">
+            <button onclick="closeInstallGuide()" aria-label="Close" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-pink-100 hover:bg-pink-200 text-[#d6336c] font-bold text-lg flex items-center justify-center cursor-pointer">
+                &times;
+            </button>
+
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#ff4d6d] to-[#ff758f] flex items-center justify-center text-2xl mx-auto mb-3 shadow-md text-white">
+                ❤️
+            </div>
+            <h3 class="font-script text-3xl font-bold text-[#d6336c] mb-1">
+                Save to Home Screen
+            </h3>
+            <p class="text-xs text-[#6d3b47] mb-5">
+                Add this page to your phone's home screen so it opens just like a real app!
+            </p>
+
+            <div class="space-y-3 text-left text-xs sm:text-sm text-[#4a1525]">
+                <div class="bg-white p-3.5 rounded-xl border border-pink-100">
+                    <p class="font-semibold text-[#d6336c] mb-1">📱 Android (Chrome):</p>
+                    <p>Tap the three dots <b>(⋮)</b> at the top-right corner and select <b>"Add to Home screen"</b> or <b>"Install app"</b>.</p>
+                </div>
+                <div class="bg-white p-3.5 rounded-xl border border-pink-100">
+                    <p class="font-semibold text-[#d6336c] mb-1">🍎 iPhone (Safari):</p>
+                    <p>Tap the <b>Share</b> button at the bottom, scroll down, and tap <b>"Add to Home Screen"</b>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // =========================================================================
+        // 1. MILESTONE DATES & LOVE LETTERS DATA
+        // =========================================================================
+        const milestones = {
+            main: {
+                prefix: 'main',
+                date: new Date(2026, 6, 21, 21, 36, 0), // July 21, 2026, 9:36 PM
+                title: 'Time Together ❤️',
+                dateLabel: 'Since July 21, 2026 • 9:36 PM',
+                hasPhoto: false,
+                letter: "My Dearest Madam ji,\n\nFrom the moment our journey officially began on July 21st at 9:36 PM, my world has been brighter, warmer, and happier. Every second that ticks by on this counter is a reminder of how lucky I am to call you mine.\n\nThank you for being my peace, my happiness, and my favorite person in the entire world."
+            },
+            saw: {
+                prefix: 'saw',
+                date: new Date(2025, 1, 13, 8, 23, 0), // February 13, 2025, 8:23 AM
+                title: 'The Day I First Saw You 👀',
+                dateLabel: 'February 13, 2025 • 8:23 AM',
+                hasPhoto: false,
+                letter: "My Dearest Madam ji,\n\nI still remember February 13th at 8:23 AM so clearly. The very first time my eyes saw you, it felt like time paused for a moment. I didn't know then how much you would come to mean to me, but my heart knew right away that you were someone truly unforgettable."
+            },
+            talk: {
+                prefix: 'talk',
+                date: new Date(2025, 10, 18, 18, 28, 0), // November 18, 2025, 6:28 PM
+                title: 'Our First Conversation 💬',
+                dateLabel: 'November 18, 2025 • 6:28 PM',
+                hasPhoto: false,
+                letter: "My Dearest Madam ji,\n\n18th November at 6:28 PM- the moment I made a shit on Instagram. I still remember what did I do that day how I started our first conversation. My heart was racing, yet talking to you felt so special and unforgettable. That single moment became the start of my favorite part of every day."
+            },
+            met: {
+                prefix: 'met',
+                date: new Date(2026, 8, 12, 0, 42, 0), // September 12, 2026, 12:42 AM
+                title: 'First Meeting as a Couple 👩‍❤️‍👨',
+                dateLabel: 'September 12, 2026 • 12:42 AM',
+                hasPhoto: true,
+                letter: "My Dearest Madam ji,\n\nMeeting you for the first time as a couple on September 12th at 12:42 AM is a moment I will hold close to my heart forever. Looking at you right in front of me and knowing we belong to each other was pure magic. Here is to a lifetime of moments together."
+            }
+        };
+
+        // =========================================================================
+        // 2. EXACT CALENDAR TIME DIFFERENCE (YEARS, MONTHS, DAYS, HOURS, MINS, SECS)
+        // =========================================================================
+        function calculateCalendarDiff(startDate, endDate) {
+            if (endDate < startDate) {
+                return { years: 0, months: 0, days: 0, hours: 0, minutes: 0, seconds: 0 };
+            }
+
+            let years = endDate.getFullYear() - startDate.getFullYear();
+            let months = endDate.getMonth() - startDate.getMonth();
+            let days = endDate.getDate() - startDate.getDate();
+            let hours = endDate.getHours() - startDate.getHours();
+            let minutes = endDate.getMinutes() - startDate.getMinutes();
+            let seconds = endDate.getSeconds() - startDate.getSeconds();
+
+            if (seconds < 0) {
+                seconds += 60;
+                minutes--;
+            }
+            if (minutes < 0) {
+                minutes += 60;
+                hours--;
+            }
+            if (hours < 0) {
+                hours += 24;
+                days--;
+            }
+            if (days < 0) {
+                const prevMonth = new Date(endDate.getFullYear(), endDate.getMonth(), 0);
+                days += prevMonth.getDate();
+                months--;
+            }
+            if (months < 0) {
+                months += 12;
+                years--;
+            }
+
+            return { years, months, days, hours, minutes, seconds };
+        }
+
+        function updateAllCounters() {
+            const now = new Date();
+
+            Object.values(milestones).forEach(item => {
+                const diff = calculateCalendarDiff(item.date, now);
+
+                document.getElementById(`${item.prefix}-years`).textContent = diff.years;
+                document.getElementById(`${item.prefix}-months`).textContent = diff.months;
+                document.getElementById(`${item.prefix}-days`).textContent = diff.days;
+                document.getElementById(`${item.prefix}-hours`).textContent = String(diff.hours).padStart(2, '0');
+                document.getElementById(`${item.prefix}-minutes`).textContent = String(diff.minutes).padStart(2, '0');
+                document.getElementById(`${item.prefix}-seconds`).textContent = String(diff.seconds).padStart(2, '0');
+            });
+        }
+
+        // =========================================================================
+        // 3. SMOOTH TWO-SCREEN SWITCHING
+        // =========================================================================
+        function switchScreen(targetScreen) {
+            const s1 = document.getElementById('screen-1');
+            const s2 = document.getElementById('screen-2');
+
+            if (targetScreen === 2) {
+                s1.style.opacity = '0';
+                s1.style.transform = 'translateY(-10px)';
+                setTimeout(() => {
+                    s1.classList.remove('active');
+                    s2.classList.add('active');
+                    requestAnimationFrame(() => {
+                        s2.style.opacity = '1';
+                        s2.style.transform = 'translateY(0)';
+                    });
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 280);
+            } else {
+                s2.style.opacity = '0';
+                s2.style.transform = 'translateY(10px)';
+                setTimeout(() => {
+                    s2.classList.remove('active');
+                    s1.classList.add('active');
+                    requestAnimationFrame(() => {
+                        s1.style.opacity = '1';
+                        s1.style.transform = 'translateY(0)';
+                    });
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 280);
+            }
+        }
+
+        // =========================================================================
+        // 4. SECRET MEMORY POP-UP MODAL LOGIC
+        // =========================================================================
+        function openLetterModal(key) {
+            const item = milestones[key];
+            if (!item) return;
+
+            document.getElementById('modal-title').textContent = item.title;
+            document.getElementById('modal-date').textContent = item.dateLabel;
+            document.getElementById('modal-body').textContent = item.letter;
+
+            const photoWrapper = document.getElementById('modal-photo-wrapper');
+            if (item.hasPhoto) {
+                photoWrapper.classList.remove('hidden');
+            } else {
+                photoWrapper.classList.add('hidden');
+            }
+
+            document.getElementById('letter-modal').classList.add('active');
+        }
+
+        function closeLetterModal() {
+            document.getElementById('letter-modal').classList.remove('active');
+        }
+
+        // =========================================================================
+        // 5. BACKGROUND MUSIC PLAYER
+        // =========================================================================
+        let isPlaying = false;
+
+        function toggleMusic() {
+            const audio = document.getElementById('bg-music');
+            const btn = document.getElementById('music-toggle-btn');
+            const label = document.getElementById('music-label');
+
+            if (isPlaying) {
+                audio.pause();
+                isPlaying = false;
+                btn.classList.remove('playing');
+                label.textContent = 'Play a Song';
+            } else {
+                audio.play().then(() => {
+                    isPlaying = true;
+                    btn.classList.add('playing');
+                    label.textContent = 'Play a Song';
+                }).catch(() => {
+                    isPlaying = false;
+                    btn.classList.remove('playing');
+                });
+            }
+        }
+
+        // =========================================================================
+        // 6. DYNAMIC WEB APP MANIFEST & SAVE TO HOME SCREEN
+        // =========================================================================
+        let deferredPrompt = null;
+
+        function setupWebAppManifest() {
+            const iconUrl = document.getElementById('app-favicon').href;
+            const manifest = {
+                name: "Forever With Madam Ji ❤️",
+                short_name: "Madam Ji ❤️",
+                start_url: ".",
+                display: "standalone",
+                background_color: "#ff9a9e",
+                theme_color: "#ff4d6d",
+                icons: [
+                    { src: iconUrl, sizes: "512x512", type: "image/svg+xml", purpose: "any maskable" }
+                ]
+            };
+            const blob = new Blob([JSON.stringify(manifest)], { type: 'application/json' });
+            const link = document.createElement('link');
+            link.rel = 'manifest';
+            link.href = URL.createObjectURL(blob);
+            document.head.appendChild(link);
+        }
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+        });
+
+        function openInstallGuide() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then(() => {
+                    deferredPrompt = null;
+                });
+            } else {
+                document.getElementById('install-modal').classList.add('active');
+            }
+        }
+
+        function closeInstallGuide() {
+            document.getElementById('install-modal').classList.remove('active');
+        }
+
+        // =========================================================================
+        // 7. SOFT FLOATING HEARTS IN BACKGROUND
+        // =========================================================================
+        // 7. SOFT FLOATING HEARTS & BOKEH ORBS IN BACKGROUND
+        // =========================================================================
+        function createFloatingHearts() {
+            const container = document.getElementById('hearts-bg');
+            const symbols = ['❤', '♥', '💖', '💕', '✨'];
+
+            for (let i = 0; i < 20; i++) {
+                const span = document.createElement('span');
+                span.className = 'heart-particle';
+                span.textContent = symbols[i % symbols.length];
+                span.style.left = `${Math.random() * 100}%`;
+                span.style.fontSize = `${Math.random() * 14 + 14}px`;
+                span.style.animationDuration = `${Math.random() * 8 + 9}s`;
+                span.style.animationDelay = `${Math.random() * 8}s`;
+                container.appendChild(span);
+            }
+
+            // Soft glowing bokeh circles for dreamy depth of field
+            for (let j = 0; j < 14; j++) {
+                const orb = document.createElement('div');
+                orb.className = 'bokeh-orb';
+                const size = Math.random() * 36 + 18;
+                orb.style.width = `${size}px`;
+                orb.style.height = `${size}px`;
+                orb.style.left = `${Math.random() * 100}%`;
+                orb.style.animationDuration = `${Math.random() * 10 + 12}s`;
+                orb.style.animationDelay = `${Math.random() * 10}s`;
+                container.appendChild(orb);
+            }
+        }
+
+        window.onload = function () {
+            createFloatingHearts();
+            setupWebAppManifest();
+            updateAllCounters();
+            setInterval(updateAllCounters, 1000);
+        };
+    </script>
+</body>
+</html>
+```
